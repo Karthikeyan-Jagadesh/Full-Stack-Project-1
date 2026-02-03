@@ -1,0 +1,132 @@
+:root {
+  --bg: #f6f6f6;
+  --text: #222;
+  --accent: #4a90e2;
+  --card: #fff;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f2f2f2;
+  --accent: #64b5f6;
+  --card: #2a2a2a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 30px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#date-time {
+  font-size: 14px;
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: var(--accent);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 5px;
+}
+
+.task-input input, .task-input button {
+  padding: 10px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#addBtn {
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.day {
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.day:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.day.selected {
+  background: var(--accent);
+  color: white;
+}
+
+#taskList {
+  margin-top: 15px;
+}
+
+#tasks li {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.time-left {
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.delete-btn {
+  background: crimson;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
