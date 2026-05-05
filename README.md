@@ -117,6 +117,10 @@ A full-stack web application that combines an interactive task calendar for user
 * User activity logs for admins
 * Responsive mobile-first UI
 
+##Note
+* Download npm modules before running the server
+* using npm install
+
 ---
 
 Built with care using Node.js, Oracle DB, and Vanilla JavaScript.
