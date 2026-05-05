@@ -117,7 +117,7 @@ A full-stack web application that combines an interactive task calendar for user
 * User activity logs for admins
 * Responsive mobile-first UI
 
-##Note
+## Note
 * Download npm modules before running the server
 * using npm install
 
