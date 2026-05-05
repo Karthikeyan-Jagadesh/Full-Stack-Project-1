@@ -1,6 +1,6 @@
-# Full-Stack-Project-1
-=======
 # To-Do Calendar & Admin Management System
+## Full-Stack-Project-1
+
 
 A full-stack web application that combines an interactive task calendar for users with a centralized admin dashboard for system-wide task management. Built with a Node.js/Express backend and an Oracle Database, the system supports secure authentication, role-based access, and real-time task monitoring.
 
