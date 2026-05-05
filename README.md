@@ -1,129 +1,126 @@
-# To-Do Calendar & Admin Management System
-## Full-Stack-Project-1
-
-
-A full-stack web application that combines an interactive task calendar for users with a centralized admin dashboard for system-wide task management. Built with a Node.js/Express backend and an Oracle Database, the system supports secure authentication, role-based access, and real-time task monitoring.
-
 ---
 
-## Features
-
-### User Portal
-
-* **Interactive Calendar**
-  View and select dates to manage daily tasks seamlessly.
-
-* **Task Management**
-  Add tasks with specific deadlines and view real-time **"Time Left"** countdowns.
-
-* **Local Persistence**
-  Tasks are stored in `localStorage` for fast, client-side access and persistence.
-
-* **Theme Customization**
-  Toggle between **Light** and **Dark** modes for a personalized experience.
-
----
-
-###  Admin Dashboard
-
-* **Centralized Statistics**
-  Displays real-time counts for:
-
-  * Total Tasks
-  * Pending Tasks
-  * Completed Tasks
-
-* **Global Task Oversight**
-  View all user tasks in a structured, system-wide table.
-
-* **Management Controls**
-
-  * Mark tasks as **Complete**
-  * Delete tasks globally
-
----
-
-### Backend & Authentication
-
-* **Role-Based Redirection**
-  Users are automatically redirected to either the **User Portal** or **Admin Dashboard** based on their role stored in the Oracle database.
-
-* **Secure Registration**
-  User registration captures:
-
-  * Name
-  * Roll Number
-  * Role (User/Admin)
-
-* **Authentication & Security**
-
-  * Password hashing using `bcryptjs`
-  * Token-based authentication with `jsonwebtoken`
-
----
-
-## Tech Stack
-
-### Frontend
-
-* HTML5
-* CSS3 (Poppins font)
-* Vanilla JavaScript
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Database
-
-* Oracle XE
-* `oracledb` driver
-
-### Key Dependencies
-
-* `cors`
-* `body-parser`
-* `bcryptjs`
-* `jsonwebtoken`
-
----
-
-## Project Structure
+## system.identity
 
 ```
-📦 To-Do-Calendar-System
-├── server.js              # Express server & Oracle DB integration
-├── package.json           # Project metadata & dependencies
-│
-├── login.html             # Authentication UI
-├── login.js               # Login & registration logic
-├── login.css              # Auth page styling
-│
-├── user.html              # User task calendar interface
-├── user.js                # User-side task logic
-├── user.css               # User UI styling
-│
-├── admin.html             # Admin dashboard interface
-├── admin.js               # Admin task management logic
-├── admin.css              # Admin UI styling
+name        : To-Do Calendar & Admin Management System
+type        : full-stack web application
+architecture: role-based (user / admin)
+status      : active
 ```
 
 ---
-## Future Enhancements
 
-* Server-side task persistence (DB-based instead of localStorage)
-* Task reminders & notifications
-* User activity logs for admins
-* Responsive mobile-first UI
+## system.overview
 
-## Note
-* Download npm modules before running the server
-* using npm install
+This system is designed to manage tasks through a structured, time-oriented approach.
+
+Users interact with tasks via a calendar interface, while administrators maintain
+full system visibility and control. The project focuses on combining frontend interaction,
+backend logic, and role-based access into a single working system.
 
 ---
 
-Built with care using Node.js, Oracle DB, and Vanilla JavaScript.
+## modules
 
+### user.module
 
+```
+- calendar-based task interaction
+- date selection and task assignment
+- deadline tracking with time-left calculation
+- local storage persistence
+- interface theme switching
+```
 
+---
+
+### admin.module
+
+```
+- global task visibility
+- system statistics:
+    total / pending / completed
+- task lifecycle control:
+    mark complete / delete
+```
+
+---
+
+### auth.module
+
+```
+- role-based registration (user / admin)
+- password hashing using bcryptjs
+- token-based authentication using JWT
+- dynamic routing based on user role
+```
+
+---
+
+### backend.module
+
+```
+- Node.js runtime environment
+- Express.js routing
+- Oracle database integration
+- user credential and role storage
+```
+
+---
+
+## tech.stack
+
+```
+frontend  : HTML, CSS, JavaScript
+backend   : Node.js, Express.js
+database  : Oracle XE
+security  : bcryptjs, jsonwebtoken
+```
+
+---
+
+## system.visuals
+
+![login](./Screenshot/loginpage.png)
+![register](./Screenshot/registerpage.png)
+![user](./Screenshot/userpage.png)
+![admin](./Screenshot/adminpage.png)
+
+---
+
+## current.state
+
+```
+- frontend and backend integrated
+- user and admin workflows operational
+- authentication system functional
+- project stable for local execution
+```
+
+---
+
+## pending.upgrades
+
+```
+- migrate task storage to database
+- implement notification system
+- improve mobile responsiveness
+- add user activity tracking
+```
+
+---
+
+## execution
+
+```
+npm install
+node server.js
+```
+
+---
+
+## system.note
+
+This project represents a transition from interface-driven development
+to building complete systems that manage users, roles, and data together.
