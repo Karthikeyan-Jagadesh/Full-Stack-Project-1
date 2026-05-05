@@ -9,6 +9,8 @@ name        : To-Do Calendar & Admin Management System
 type        : full-stack web application
 architecture: role-based (user / admin)
 status      : active
+version     : 1.0.0
+stack       : Node.js · Oracle DB · JWT
 ```
 
 ---
